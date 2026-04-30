@@ -1,4 +1,4 @@
-# Hi👋, Gutten Tag! I'm Paul, 
+# Hi👋, I'm Paul, 
 
 Full-Stack Engineer building scalable web platforms, APIs, and real-time systems.
 
