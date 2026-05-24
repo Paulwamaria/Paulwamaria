@@ -61,8 +61,8 @@ const projectData: Record<
     outcome:
       "Tulia demonstrates my ability to build a real-time full-stack product from the ground up, combining frontend UX, backend architecture, database design, and live communication systems into a cohesive platform.",
 
-    live: "#",
-    code: "https://github.com/Paulwamaria/tulia",
+    live: "https://growwithtulia.com",
+    code: "/code-access?project=tulia",
     privateCode: true,
   },
   carenne: {
