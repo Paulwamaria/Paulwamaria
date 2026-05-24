@@ -33,8 +33,8 @@ const featuredProjects = [
     ],
     impact:
       "Demonstrates full-stack product development with real-time features, authentication flows, and scalable backend architecture.",
-    live: "https://github.com/Paulwamaria/tulia",
-    code: "https://github.com/Paulwamaria/tulia",
+    live: "https://growwithtulia.com",
+    code: "/code-access?project=tulia",
     caseStudy: "/projects/tulia",
   },
   {
