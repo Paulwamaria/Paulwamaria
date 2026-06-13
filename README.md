@@ -2,7 +2,7 @@
 
 Full-Stack Engineer building scalable web platforms, APIs, and real-time systems.
 
-**Stack:** Next.js · React · TypeScript · Python . Django · NestJS · PostgreSQL · Prisma · Docker · Azure
+**Primary Stack:** Next.js · React · TypeScript · Python . Django · NestJS · PostgreSQL · Prisma · Docker · Azure
 
 🌍 https://paulwamaria.netlify.app
 
@@ -36,14 +36,6 @@ Full-Stack Engineer building scalable web platforms, APIs, and real-time systems
 
 </details>
 
-<!-- <details>
-<summary>👉 $\color{green}{\text{View Writing}}$</summary>
 
-- [What Remains After ](https://www.amazon.com/dp/B0GWQH1BM5)
-- [The Curated Ruin](https://www.amazon.com/dp/B0GTF3JFC1)
-
-</details> -->
-
----
 
 > > I Design. Develop. Test. Deploy. Automate. I Build Systems, not just features.

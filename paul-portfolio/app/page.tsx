@@ -237,7 +237,7 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="/Paul_Wamaria_Premium_CV_Clickable_Colored.pdf"
+                    href="/Paul_Wamaria_CV.pdf"
                     download
                     className="inline-flex items-center rounded-2xl border border-white/20 px-5 py-3 font-medium text-white transition hover:bg-white/10"
                   >
@@ -369,7 +369,7 @@ export default function HomePage() {
           </div>
           <section className="mx-auto max-w-7xl px-6 py-12">
             <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">
-              Systems I've Built
+              Systems I&apos;ve Built
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

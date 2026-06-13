@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Github, Lock } from "lucide-react";
+import AnimatedCaseStudy from "./AnimatedCaseStudy";
 
 const projectData: Record<
   string,
@@ -101,7 +102,7 @@ const projectData: Record<
       "NexaPOS demonstrates my ability to build practical business-critical systems involving transactions, permissions, inventory, auditability, and operational workflows.",
     live: "https://github.com/Paulwamaria/nexaPOS",
     code: "https://github.com/Paulwamaria/nexaPOS",
-    privateCode: true,
+    privateCode: false,
   },
   carenne: {
     title: "Carenne Fashion House",
@@ -252,183 +253,20 @@ export default async function ProjectCaseStudyPage({
     );
   }
 
+  const relatedProjects = Object.entries(projectData)
+    .filter(([key]) => key !== slug)
+    .slice(0, 3)
+    .map(([key, item]) => ({
+      slug: key,
+      title: item.title,
+      category: item.category,
+    }));
+
   return (
-    <main className="min-h-screen bg-neutral-950 text-white">
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 lg:px-12">
-          <Link
-            href="/"
-            className="mb-8 inline-flex items-center text-sm text-neutral-300 transition hover:text-white"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Portfolio
-          </Link>
-
-          <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">
-            {project.category}
-          </p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-            {project.title}
-          </h1>
-          <p className="mt-6 max-w-3xl text-base leading-8 text-neutral-300 md:text-lg">
-            {project.overview}
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            {project.live && (
-              <Link
-                href={project.live}
-                target={project.live.startsWith("http") ? "_blank" : undefined}
-                className="inline-flex items-center rounded-2xl bg-white px-5 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
-              >
-                <ExternalLink className="mr-2 h-4 w-4" />
-                View Live Project
-              </Link>
-            )}
-
-            {project.privateCode ? (
-              <Link
-                href={project.code || "/code-access"}
-                className="inline-flex items-center rounded-2xl border border-white/15 px-5 py-3 font-medium text-white transition hover:bg-white/10"
-              >
-                <Lock className="mr-2 h-4 w-4" />
-                Code Access
-              </Link>
-            ) : (
-              <Link
-                href={project.code || "#"}
-                target={project.code?.startsWith("http") ? "_blank" : undefined}
-                className="inline-flex items-center rounded-2xl border border-white/15 px-5 py-3 font-medium text-white transition hover:bg-white/10"
-              >
-                <Github className="mr-2 h-4 w-4" />
-                View Code
-              </Link>
-            )}
-          </div>
-
-          <div className="relative mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-            <Image
-              src={project.heroImage}
-              alt={project.title}
-              width={1400}
-              height={900}
-              className="h-auto w-full object-cover"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-10 lg:px-12">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-8">
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-              <h2 className="text-2xl font-semibold">The Problem</h2>
-              <p className="mt-4 leading-8 text-neutral-300">
-                {project.problem}
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-              <h2 className="text-2xl font-semibold">The Solution</h2>
-              <p className="mt-4 leading-8 text-neutral-300">
-                {project.solution}
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-              <h2 className="text-2xl font-semibold">Challenges & Decisions</h2>
-              <ul className="mt-4 space-y-3 text-neutral-300">
-                {project.challenges.map((challenge) => (
-                  <li key={challenge} className="leading-8">
-                    • {challenge}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-              <h2 className="text-2xl font-semibold">Outcome</h2>
-              <p className="mt-4 leading-8 text-neutral-300">
-                {project.outcome}
-              </p>
-            </div>
-          </div>
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <h2 className="text-2xl font-semibold">What I Learned</h2>
-            <p className="mt-4 leading-8 text-neutral-300">
-              This project strengthened my ability to think beyond features and
-              design complete systems around real workflows, data integrity,
-              user roles, scalability, and maintainability.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-              <h2 className="text-2xl font-semibold">Key Features</h2>
-              <ul className="mt-4 space-y-3 text-neutral-300">
-                {project.features.map((feature) => (
-                  <li key={feature} className="leading-8">
-                    • {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-              <h2 className="text-2xl font-semibold">Tech Stack</h2>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {project.stack.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-neutral-900 px-4 py-2 text-sm text-neutral-200"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="mx-auto max-w-6xl px-6 pb-16 md:px-10 lg:px-12">
-        <div className="rounded-[2rem] border border-fuchsia-400/20 bg-gradient-to-br from-fuchsia-500/10 via-white/5 to-purple-500/10 p-8 text-center">
-          <h2 className="text-2xl font-semibold">
-            Interested in building something like this?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-300">
-            I design, develop, test, deploy, and automate scalable systems for
-            real-world products and business workflows.
-          </p>
-
-          <Link
-            href="mailto:paulwamaria@gmail.com"
-            className="mt-6 inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
-          >
-            Get In Touch
-          </Link>
-        </div>
-
-        <div className="mt-12">
-          <h2 className="text-2xl font-semibold">Other Projects</h2>
-
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {Object.entries(projectData)
-              .filter(([key]) => key !== slug)
-              .slice(0, 3)
-              .map(([key, item]) => (
-                <Link
-                  key={key}
-                  href={`/projects/${key}`}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-fuchsia-400/30 hover:bg-white/10"
-                >
-                  <p className="text-sm text-fuchsia-300">{item.category}</p>
-                  <h3 className="mt-2 text-lg font-semibold">{item.title}</h3>
-                </Link>
-              ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    <AnimatedCaseStudy
+      project={project}
+      slug={slug}
+      relatedProjects={relatedProjects}
+    />
   );
 }
