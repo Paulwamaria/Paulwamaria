@@ -38,6 +38,20 @@ const featuredProjects = [
     caseStudy: "/projects/tulia",
   },
   {
+    title: "NexaPOS",
+    slug: "nexapos",
+    image: "/projects/nexapos.png",
+    category: "Multi-Branch Point of Sale System",
+    summary:
+      "A retail management platform designed to streamline inventory, sales, cash shifts, and branch operations through structured business workflows.",
+    stack: ["Django", "Django REST Framework", "JWT", "PostgreSQL", "SQLite"],
+    impact:
+      "Demonstrates practical business systems engineering through inventory control, sales processing, returns management, audit trails, and role-based access.",
+    live: "https://github.com/Paulwamaria/nexaPOS",
+    code: "https://github.com/Paulwamaria/nexaPOS",
+    caseStudy: "/projects/nexapos",
+  },
+  {
     title: "Carenne Fashion House",
     slug: "carenne",
     image: "/projects/carenne.png",
@@ -96,6 +110,15 @@ const featuredProjects = [
   },
 ];
 
+const systems = [
+  "Real-Time Platforms",
+  "POS Systems",
+  "E-Commerce Systems",
+  "Social Applications",
+  "Business Websites",
+  "Automation Workflows",
+];
+
 const books = [
   {
     title: "What Remains After",
@@ -137,7 +160,12 @@ const expertise = [
     text: "From concept to launch: shaping digital products that connect technology, operations, and real-world value.",
   },
 ];
-
+const metrics = [
+  "6+ Production Platforms",
+  "20+ APIs Designed",
+  "Real-Time Systems",
+  "Full-Stack Ownership",
+];
 const experience = [
   {
     role: "Freelance Full-Stack Developer",
@@ -188,16 +216,16 @@ export default function HomePage() {
                   Full-Stack Developer • Nakuru, Kenya
                 </div>
 
-                <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-                  I build scalable digital systems for commerce, automation, and
-                  modern products.
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                  I design, develop, test,
+                  <span className="text-fuchsia-400"> deploy,</span>
+                  and automate scalable systems.
                 </h1>
 
-                <p className="mt-6 max-w-2xl text-base leading-7 text-neutral-300 md:text-lg">
-                  I’m Paul Wamaria — a full-stack developer focused on turning
-                  ideas into production-ready platforms with strong
-                  architecture, polished user experience, and real business
-                  value.
+                <p className="mt-8 max-w-3xl text-lg md:text-xl text-neutral-300 leading-8">
+                  From real-time platforms and business software to luxury
+                  commerce experiences, I build products that solve real-world
+                  problems.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -209,7 +237,7 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="/Paul_Wamaria_CV.pdf"
+                    href="/Paul_Wamaria_Premium_CV_Clickable_Colored.pdf"
                     download
                     className="inline-flex items-center rounded-2xl border border-white/20 px-5 py-3 font-medium text-white transition hover:bg-white/10"
                   >
@@ -276,6 +304,11 @@ export default function HomePage() {
                 </div>
 
                 <div className="p-6">
+                  {project.slug === "tulia" && (
+                    <span className="mb-3 inline-flex rounded-full bg-fuchsia-500/20 px-3 py-1 text-xs font-medium text-fuchsia-200">
+                      Flagship Project
+                    </span>
+                  )}
                   <p className="text-sm text-fuchsia-300">{project.category}</p>
                   <h3 className="mt-3 text-2xl font-semibold">
                     {project.title}
@@ -283,6 +316,7 @@ export default function HomePage() {
                   <p className="mt-4 text-sm leading-7 text-neutral-300">
                     {project.summary}
                   </p>
+
                   <p className="mt-4 text-sm leading-7 text-neutral-400">
                     {project.impact}
                   </p>
@@ -333,6 +367,22 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <section className="mx-auto max-w-7xl px-6 py-12">
+            <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">
+              Systems I've Built
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              {systems.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-fuchsia-400/20 bg-fuchsia-500/10 px-4 py-2 text-sm text-fuchsia-200"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </section>
         </section>
 
         <section className="border-y border-white/10 bg-white/[0.03]">
@@ -358,6 +408,18 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-neutral-300">
                     {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 grid gap-4 md:grid-cols-4">
+              {metrics.map((metric) => (
+                <div
+                  key={metric}
+                  className="rounded-[2rem] border border-white/10 bg-neutral-900/70 p-6 text-center"
+                >
+                  <p className="text-xl font-semibold text-fuchsia-300">
+                    {metric}
                   </p>
                 </div>
               ))}
@@ -492,13 +554,12 @@ export default function HomePage() {
                   Let’s Work Together
                 </p>
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-                  Need a developer who can build with both code and product
-                  thinking?
+                  Looking for someone who can take a product from idea to
+                  deployment?
                 </h2>
                 <p className="mt-4 text-base leading-8 text-neutral-300">
-                  I’m open to freelance work, collaborations, and full-stack
-                  opportunities where thoughtful systems and strong execution
-                  matter.
+                  I help teams design, develop, test, deploy, and automate
+                  systems that create measurable value.
                 </p>
               </div>
 

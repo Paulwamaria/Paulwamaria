@@ -1,15 +1,14 @@
-# Hi👋, I'm Paul, 
+# Hi👋, I'm Paul,
 
 Full-Stack Engineer building scalable web platforms, APIs, and real-time systems.
 
-**Stack:** Next.js · React · TypeScript · Python . Django · NestJS · PostgreSQL · Prisma · Docker · Azure  
+**Stack:** Next.js · React · TypeScript · Python . Django · NestJS · PostgreSQL · Prisma · Docker · Azure
 
-🌍 https://paulwamaria.netlify.app  
+🌍 https://paulwamaria.netlify.app
 
-📧 paulwamaria@gmail.com 
+📧 paulwamaria@gmail.com
 
 🔗 https://www.linkedin.com/in/paul-wamaria-73b886189/
-
 
 ---
 
@@ -22,18 +21,18 @@ Full-Stack Engineer building scalable web platforms, APIs, and real-time systems
 **Backend:** Python, FastAPI, Django, DRF, Flask, NestJS, Node.js  
 **Database:** PostgreSQL, Prisma, Redis  
 **Infra:** Docker, Linux, Git  
-**Cloud:** Azure, AWS, Netlify, Vercel, Render  
+**Cloud:** Azure, AWS, Netlify, Vercel, Render
 
 </details>
 
 <details>
-<summary>👉 $\color{green}{\text{View Projects}}$</summary>
+<summary>👉 $\color{green}{\text{Flagship Projects}}$</summary>
 
--  **[Carenne** – E-commerce platform (Next.js, Django)](https://carennedesigns.com/)
-- **Tulia** – Real-time relationship platform (Next.js, NestJS, Socket.IO)  
-- **[Ascend** – Social growth platform (React, Django)](https://nexa-asfrontend.vercel.app/)
-- **[Visoi** – Business website (HTML, CSS, JS)](https://visoimachineriesnakuru.netlify.app/)  
-- **Trading System** – Automation workflows (Python, MT5)  
+- [Carenne – E-commerce platform (Next.js, Django)](https://carennedesigns.com)
+- [Tulia – Real-time relationship platform (Next.js, NestJS, Socket.IO)](https://growwithtulia.com)
+- [Ascend – Social growth platform (React, Django)](https://nexa-asfrontend.vercel.app/)
+- [NexaPOS - A modern Point of sale system (Django, Nextjs)] (https://github.com/Paulwamaria/nexaPOS)
+- Trading System – Automation workflows (Python, MT5)
 
 </details>
 
@@ -47,4 +46,4 @@ Full-Stack Engineer building scalable web platforms, APIs, and real-time systems
 
 ---
 
-> >  I Design. Develop. Test. Deploy. Automate. I Build Systems, not just features. 
+> > I Design. Develop. Test. Deploy. Automate. I Build Systems, not just features.

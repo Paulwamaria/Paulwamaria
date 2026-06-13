@@ -65,6 +65,44 @@ const projectData: Record<
     code: "/code-access?project=tulia",
     privateCode: true,
   },
+  nexapos: {
+    title: "NexaPOS",
+    category: "Multi-Branch Point of Sale System",
+    heroImage: "/projects/nexapos.png",
+    overview:
+      "NexaPOS is a business-focused point-of-sale system designed to support multi-branch retail operations through inventory tracking, sales processing, returns, cash shifts, role-based access, and audit logging.",
+    problem:
+      "Retail businesses often struggle with disconnected sales records, weak inventory visibility, poor accountability, and manual operational workflows. The challenge was to design a system that could support daily retail activity while keeping branch-level data structured and traceable.",
+    solution:
+      "I built NexaPOS as a backend-driven business system using Django and Django REST Framework, focusing on inventory control, sales workflows, returns, user roles, branch stock movement, audit logs, and operational reporting.",
+    features: [
+      "Multi-branch inventory management",
+      "Sales and sale item processing",
+      "Sale returns workflow",
+      "Cash shift opening and closing",
+      "Role-based access control",
+      "Audit logging and activity tracking",
+      "Low-stock monitoring",
+    ],
+    stack: [
+      "Django",
+      "Django REST Framework",
+      "JWT",
+      "SQLite",
+      "PostgreSQL-ready",
+    ],
+    challenges: [
+      "Designing clean workflows for sales, returns, and branch stock movement",
+      "Handling role-based access across superadmin, admin, storekeeper, and cashier users",
+      "Maintaining traceable audit logs for critical business operations",
+      "Structuring APIs for real-world POS testing and future frontend integration",
+    ],
+    outcome:
+      "NexaPOS demonstrates my ability to build practical business-critical systems involving transactions, permissions, inventory, auditability, and operational workflows.",
+    live: "https://github.com/Paulwamaria/nexaPOS",
+    code: "https://github.com/Paulwamaria/nexaPOS",
+    privateCode: true,
+  },
   carenne: {
     title: "Carenne Fashion House",
     category: "Luxury E-commerce Platform",
@@ -316,6 +354,14 @@ export default async function ProjectCaseStudyPage({
               </p>
             </div>
           </div>
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+            <h2 className="text-2xl font-semibold">What I Learned</h2>
+            <p className="mt-4 leading-8 text-neutral-300">
+              This project strengthened my ability to think beyond features and
+              design complete systems around real workflows, data integrity,
+              user roles, scalability, and maintainability.
+            </p>
+          </div>
 
           <div className="space-y-8">
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
@@ -342,6 +388,44 @@ export default async function ProjectCaseStudyPage({
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="mx-auto max-w-6xl px-6 pb-16 md:px-10 lg:px-12">
+        <div className="rounded-[2rem] border border-fuchsia-400/20 bg-gradient-to-br from-fuchsia-500/10 via-white/5 to-purple-500/10 p-8 text-center">
+          <h2 className="text-2xl font-semibold">
+            Interested in building something like this?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl leading-8 text-neutral-300">
+            I design, develop, test, deploy, and automate scalable systems for
+            real-world products and business workflows.
+          </p>
+
+          <Link
+            href="mailto:paulwamaria@gmail.com"
+            className="mt-6 inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
+          >
+            Get In Touch
+          </Link>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold">Other Projects</h2>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {Object.entries(projectData)
+              .filter(([key]) => key !== slug)
+              .slice(0, 3)
+              .map(([key, item]) => (
+                <Link
+                  key={key}
+                  href={`/projects/${key}`}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-fuchsia-400/30 hover:bg-white/10"
+                >
+                  <p className="text-sm text-fuchsia-300">{item.category}</p>
+                  <h3 className="mt-2 text-lg font-semibold">{item.title}</h3>
+                </Link>
+              ))}
           </div>
         </div>
       </section>
