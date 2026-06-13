@@ -19,6 +19,24 @@ type Project = {
   live?: string;
   code?: string;
   privateCode?: boolean;
+  step?: {
+    title: string;
+    description?: string;
+  };
+  architecture?: {
+    title: string;
+    description?: string;
+  };
+
+  flow?: {
+    title: string;
+    description?: string;
+  };
+  screenshots?: {
+    image: string;
+    title: string;
+    description: string;
+  }[];
 };
 
 type AnimatedCaseStudyProps = {
@@ -218,6 +236,28 @@ export default function AnimatedCaseStudy({
             </AnimatedCard>
 
             <AnimatedCard>
+              <h2 className="text-2xl font-semibold">Architecture Overview</h2>
+
+              <div className="mt-6 space-y-4">
+                {project.architecture?.map((step, index) => (
+                  <div
+                    key={`${step.title}-${index}`}
+                    className="flex items-center"
+                  >
+                    <div>
+                      <p className="font-medium text-white">{step.title}</p>
+                      {step.description && (
+                        <p className="mt-1 text-sm leading-6 text-neutral-400">
+                          {step.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AnimatedCard>
+
+            <AnimatedCard>
               <h2 className="text-2xl font-semibold">Project Focus</h2>
               <div className="mt-4 grid gap-3 text-sm text-neutral-300">
                 <div className="rounded-2xl border border-white/10 bg-neutral-900/70 p-4">
@@ -233,6 +273,61 @@ export default function AnimatedCaseStudy({
             </AnimatedCard>
           </div>
         </div>
+      </section>
+      <section className="mx-auto max-w-6xl px-6 pb-16 md:px-10 lg:px-12">
+        <AnimatedCard>
+          <h2 className="text-2xl font-semibold">Product Walkthrough</h2>
+
+          <p className="mt-2 text-neutral-400 mb-3">
+            A glimpse into the key experiences that shape the product journey.
+          </p>
+          <AnimatedCard>
+            <h2 className="text-2xl font-semibold">System Flow ⭐⭐⭐⭐</h2>
+
+            <div className="mt-6 space-y-4">
+              {project.flow?.map((step, index) => (
+                <div
+                  key={`${step.title}-${index}`}
+                  className="flex items-start"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-fuchsia-500/20 text-fuchsia-200">
+                    {index + 1}
+                  </div>
+
+                  <div className="ml-4 flex-1 rounded-2xl border border-white/10 bg-neutral-900/60 px-5 py-4">
+                    <p className="font-medium text-white">{step.title}</p>
+
+                    {step.description && (
+                      <p className="mt-1 text-sm leading-6 text-neutral-400">
+                        {step.description}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </AnimatedCard>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {project.screenshots?.map((shot) => (
+              <div key={shot.image}>
+                <Image
+                  src={shot.image}
+                  alt={shot.title}
+                  width={500}
+                  height={900}
+                  className="rounded-2xl border border-white/10"
+                />
+
+                <h3 className="mt-4 text-lg font-medium">{shot.title}</h3>
+
+                <p className="mt-1 text-sm leading-6 text-neutral-400">
+                  {shot.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </AnimatedCard>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-16 md:px-10 lg:px-12">

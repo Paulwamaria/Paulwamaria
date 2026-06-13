@@ -19,6 +19,24 @@ const projectData: Record<
     live?: string;
     code?: string;
     privateCode?: boolean;
+    step?: {
+      title: string;
+      description?: string;
+    };
+    architecture?: {
+      title: string;
+      description?: string;
+    };
+
+    flow?: {
+      title: string;
+      description?: string;
+    };
+    screenshots?: {
+      image: string;
+      title: string;
+      description: string;
+    }[];
   }
 > = {
   tulia: {
@@ -51,12 +69,87 @@ const projectData: Record<
       "PostgreSQL",
       "Socket.IO",
     ],
+    architecture: [
+      {
+        title: "Next.js Frontend",
+        description:
+          "Handles the user interface, onboarding, discovery, profiles, and client-side product experience.",
+      },
+      {
+        title: "NestJS API",
+        description:
+          "Provides structured backend services for authentication, users, matching, moderation, and platform workflows.",
+      },
+      {
+        title: "Prisma ORM",
+        description:
+          "Manages typed database access and keeps backend models aligned with the PostgreSQL schema.",
+      },
+      {
+        title: "PostgreSQL Database",
+        description:
+          "Stores users, profiles, matches, messages, verification states, and platform activity.",
+      },
+      {
+        title: "Socket.IO Gateway",
+        description:
+          "Powers real-time communication, messaging, typing indicators, and live interaction flows.",
+      },
+    ],
+
+    flow: [
+      {
+        title: "User Registration",
+        description:
+          "A user creates an account and enters the platform through structured onboarding.",
+      },
+      {
+        title: "Verification",
+        description:
+          "Trust-building flows help support safer and more intentional user interaction.",
+      },
+      {
+        title: "Profile Setup",
+        description:
+          "Users complete profile information that supports matching and discovery.",
+      },
+      {
+        title: "Matching",
+        description:
+          "The platform connects users through structured discovery and intentional interaction flows.",
+      },
+      {
+        title: "Real-Time Messaging",
+        description:
+          "Matched users communicate through live messaging powered by Socket.IO.",
+      },
+    ],
 
     challenges: [
       "Designing real-time communication workflows",
       "Structuring backend services for scalability",
       "Managing relational data with Prisma",
       "Balancing product design with technical implementation",
+    ],
+    screenshots: [
+      {
+        image: "/projects/tulia-auth.png",
+        title: "Authentication",
+        description:
+          "Secure onboarding designed to establish trust from the first interaction.",
+      },
+      {
+        image: "/projects/tulia-discover.png",
+        title: "Discovery",
+        description:
+          "Structured matching focused on intentional and meaningful connections.",
+      },
+      {
+        image: "/projects/tulia-chat.png",
+        title: "Real-Time Messaging",
+        description:
+          "Live conversations powered by Socket.IO for seamless communication.",
+      },
     ],
 
     outcome:
@@ -92,11 +185,90 @@ const projectData: Record<
       "SQLite",
       "PostgreSQL-ready",
     ],
+    architecture: [
+      {
+        title: "Client / API Consumer",
+        description:
+          "Frontend, admin dashboard, or API client interacts with the POS system through REST endpoints.",
+      },
+      {
+        title: "Django REST API",
+        description:
+          "Handles authentication, validation, business rules, and exposes endpoints for inventory, sales, returns, shifts, and reports.",
+      },
+      {
+        title: "Role-Based Access Layer",
+        description:
+          "Controls access for superadmin, admin, storekeeper, and cashier roles across branch-level operations.",
+      },
+      {
+        title: "Business Workflow Services",
+        description:
+          "Coordinates core POS workflows including stock movement, sales processing, returns, cash shifts, and audit events.",
+      },
+      {
+        title: "Data Layer",
+        description:
+          "Stores branches, products, branch stock, sales, sale items, returns, cash shifts, customers, users, and audit logs.",
+      },
+      {
+        title: "Reporting & Audit Trail",
+        description:
+          "Provides traceability for business-critical actions, low-stock monitoring, sales history, and operational accountability.",
+      },
+    ],
+    flow: [
+      {
+        title: "Open Cash Shift",
+        description:
+          "Cashier starts a working session to track sales activity and accountability.",
+      },
+      {
+        title: "Process Sale",
+        description:
+          "System records sale items, customer type, payment details, and totals.",
+      },
+      {
+        title: "Update Branch Stock",
+        description:
+          "Inventory is reduced at branch level after each completed sale.",
+      },
+      {
+        title: "Handle Returns",
+        description:
+          "Returned items are tracked and linked back to the original sale workflow.",
+      },
+      {
+        title: "Write Audit Log",
+        description:
+          "Critical actions are recorded to support traceability and operational oversight.",
+      },
+    ],
     challenges: [
       "Designing clean workflows for sales, returns, and branch stock movement",
       "Handling role-based access across superadmin, admin, storekeeper, and cashier users",
       "Maintaining traceable audit logs for critical business operations",
       "Structuring APIs for real-world POS testing and future frontend integration",
+    ],
+    screenshots: [
+      {
+        image: "/projects/nexapos-sales.png",
+        title: "Sales Processing",
+        description:
+          "Fast checkout workflows designed for everyday retail operations.",
+      },
+      {
+        image: "/projects/nexapos-stock.png",
+        title: "Inventory Management",
+        description:
+          "Real-time visibility into stock levels across multiple branches.",
+      },
+      {
+        image: "/projects/nexapos-audit.png",
+        title: "Audit Trail",
+        description:
+          "Operational transparency through structured activity logging.",
+      },
     ],
     outcome:
       "NexaPOS demonstrates my ability to build practical business-critical systems involving transactions, permissions, inventory, auditability, and operational workflows.",
@@ -108,32 +280,132 @@ const projectData: Record<
     title: "Carenne Fashion House",
     category: "Luxury E-commerce Platform",
     heroImage: "/projects/carenne.png",
+
     overview:
-      "Carenne Fashion House is a premium fashion commerce platform built to combine elegant branding with a scalable digital shopping experience. The project reflects both design sensitivity and full-stack engineering, with a focus on presentation, product management, and long-term growth.",
+      "Carenne Fashion House is a luxury fashion e-commerce platform built to combine premium brand presentation with scalable commerce workflows. The platform supports elegant product browsing, backend-driven product management, and customer-facing shopping experiences designed around trust, style, and usability.",
+
     problem:
-      "The goal was to create a refined digital presence for a fashion brand while still supporting the practical realities of online product presentation, backend management, and customer interaction. The challenge was building something visually premium without sacrificing structure, usability, or future scalability.",
+      "Fashion brands need more than a basic online store. They need a digital experience that reflects brand identity, presents products beautifully, and supports real business workflows such as product management, customer inquiries, reservations, and future made-to-measure operations. The challenge was to balance visual elegance with a maintainable full-stack architecture.",
+
     solution:
-      "I designed and developed a full-stack platform that blends strong visual identity with practical commerce workflows. The storefront was structured to feel polished and brand-driven, while the backend architecture supports products, reservations, and future expansion.",
+      "I built Carenne as a full-stack commerce platform using Next.js for the frontend and Django REST Framework for the backend. The frontend focuses on luxury presentation, responsive browsing, and clean product discovery, while the backend provides structured APIs for products, categories, media, reservations, and scalable business workflows.",
+
     features: [
-      "Luxury-focused storefront design",
-      "Dynamic product presentation",
-      "Backend product management workflows",
-      "Reservation and inquiry support",
-      "Responsive layout for mobile and desktop",
+      "Luxury-focused storefront experience",
+      "Responsive product browsing",
+      "Dynamic product catalog",
+      "Product detail pages",
+      "Reservation and inquiry workflows",
+      "Backend-driven product management",
+      "API-based frontend/backend integration",
+      "Scalable structure for future commerce features",
     ],
-    stack: ["Next.js", "Django", "PostgreSQL", "Django REST Framework"],
+
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Django",
+      "Django REST Framework",
+      "PostgreSQL",
+      "Docker",
+    ],
+
     challenges: [
-      "Balancing premium visual design with maintainable engineering structure",
-      "Designing data models that support flexible product workflows",
-      "Creating a clean bridge between backend content management and frontend presentation",
+      "Balancing premium visual design with clean technical architecture",
+      "Structuring product and media data for flexible presentation",
+      "Designing API workflows that support both storefront and admin needs",
+      "Maintaining responsiveness across mobile and desktop layouts",
+      "Creating a commerce experience that feels elegant without becoming complex for users",
     ],
+
     outcome:
-      "The result is a polished, scalable e-commerce platform that strengthens the brand’s online identity while establishing a solid technical foundation for future business growth.",
+      "Carenne demonstrates my ability to build business-ready commerce platforms that combine frontend polish, backend structure, database modeling, and real deployment workflows. The result is a premium online presence that supports brand identity and future growth.",
+
+    architecture: [
+      {
+        title: "Next.js Frontend",
+        description:
+          "Delivers the storefront experience, product browsing, responsive layouts, and customer-facing pages.",
+      },
+      {
+        title: "Django REST API",
+        description:
+          "Provides backend endpoints for product data, categories, reservations, and commerce workflows.",
+      },
+      {
+        title: "PostgreSQL Database",
+        description:
+          "Stores products, categories, media references, customer interactions, and business data.",
+      },
+      {
+        title: "Media & Product Assets",
+        description:
+          "Supports structured product imagery and visual presentation required for a fashion brand.",
+      },
+      {
+        title: "Deployment Layer",
+        description:
+          "Frontend and backend are deployed separately, allowing independent scaling and maintenance.",
+      },
+    ],
+
+    flow: [
+      {
+        title: "Browse Storefront",
+        description:
+          "Visitors land on a polished storefront designed to communicate brand identity and product quality.",
+      },
+      {
+        title: "Explore Products",
+        description:
+          "Users browse product categories and view structured product information from the backend.",
+      },
+      {
+        title: "View Product Details",
+        description:
+          "Product pages present images, descriptions, and relevant purchase or inquiry options.",
+      },
+      {
+        title: "Reserve / Inquire",
+        description:
+          "Customers can express interest through reservation or inquiry workflows.",
+      },
+      {
+        title: "Backend Management",
+        description:
+          "Product and business data can be managed through backend workflows, supporting operational control.",
+      },
+    ],
+
+    screenshots: [
+      {
+        image: "/projects/carenne-home.png",
+        title: "Luxury Storefront",
+        description:
+          "A polished homepage designed to communicate elegance, trust, and brand identity.",
+      },
+      {
+        image: "/projects/carenne-products.png",
+        title: "Product Browsing",
+        description:
+          "A structured catalog experience that helps users explore fashion items clearly.",
+      },
+      {
+        image: "/projects/carenne-product-detail.png",
+        title: "Product Detail",
+        description:
+          "A focused product view designed around imagery, description, and customer action.",
+      },
+    ],
+
+    insight:
+      "Premium e-commerce is not only about displaying products; it is about translating brand identity into a digital system that remains elegant for customers and manageable for the business.",
+
     live: "https://carennedesigns.com",
     code: "/code-access?project=carenne",
     privateCode: true,
   },
-
   visoima: {
     title: "Visoi Machineries",
     category: "Business Website",
