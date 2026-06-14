@@ -68,6 +68,7 @@ const projectData: Record<
       "TypeScript",
       "Prisma",
       "PostgreSQL",
+      "JWT",
       "Socket.IO",
     ],
     architecture: [
@@ -182,6 +183,7 @@ const projectData: Record<
     stack: [
       "Django",
       "Django REST Framework",
+      "Nextjs",
       "JWT",
       "SQLite",
       "PostgreSQL-ready",
