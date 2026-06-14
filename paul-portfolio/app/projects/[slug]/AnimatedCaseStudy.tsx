@@ -19,6 +19,7 @@ type Project = {
   live?: string;
   code?: string;
   privateCode?: boolean;
+  insight?: string;
   step?: {
     title: string;
     description?: string;
@@ -26,12 +27,12 @@ type Project = {
   architecture?: {
     title: string;
     description?: string;
-  };
+  }[];
 
   flow?: {
     title: string;
     description?: string;
-  };
+  }[];
   screenshots?: {
     image: string;
     title: string;
