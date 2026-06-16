@@ -30,9 +30,7 @@ Full-Stack Engineer building scalable web platforms, APIs, and real-time systems
 
 - [Carenne – E-commerce platform](https://carennedesigns.com)
 - [Tulia – Real-time relationship platform](https://growwithtulia.com)
-- [Ascend – Social growth platform](https://nexa-asfrontend.vercel.app/)
 - [NexaPOS - A modern Point of sale system](https://github.com/Paulwamaria/nexaPOS)
-- Trading System – Automation workflows (Private)
 
 </details>
 
