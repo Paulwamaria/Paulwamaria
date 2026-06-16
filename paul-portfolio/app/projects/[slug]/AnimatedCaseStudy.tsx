@@ -52,7 +52,6 @@ type AnimatedCaseStudyProps = {
 
 export default function AnimatedCaseStudy({
   project,
-  slug,
   relatedProjects = [],
 }: AnimatedCaseStudyProps) {
   return (

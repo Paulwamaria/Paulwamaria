@@ -11,6 +11,18 @@ const projectDetails: Record<
       "This repository is private as Tulia is an active product concept with user flows, platform logic, and features that are not publicly shared.",
     live: "#",
   },
+  nexapos: {
+    title: "NexaPOS",
+    description:
+      "This repository showcases a production-oriented point of sale system focused on multi-branch retail operations, inventory workflows, sales processing, and auditability. The implementation continues to evolve through ongoing testing and refinement.",
+    live: "https://github.com/Paulwamaria/nexaPOS",
+  },
+  serverFleet: {
+    title: "Server Fleet Monitor",
+    description:
+      "This repository is private as it demonstrates an infrastructure observability platform designed to monitor server health, visualize operational metrics, and support alert-driven incident response through structured monitoring workflows.",
+    live: "#",
+  },
   carenne: {
     title: "Carenne Fashion House",
     description:
@@ -28,6 +40,12 @@ const projectDetails: Record<
     description:
       "This repository is private because the platform is under active development and includes protected product architecture and backend implementation details.",
     live: "https://nexa-asfrontend.vercel.app",
+  },
+  pembe: {
+    title: "Pembe Machinery",
+    description:
+      "This repository showcases a full-stack business platform focused on product management, media workflows, and scalable content administration for machinery businesses.",
+    live: "https://github.com/Paulwamaria/pembe-machinery",
   },
 };
 

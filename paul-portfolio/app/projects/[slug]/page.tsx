@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Github, Lock } from "lucide-react";
+import { ArrowLeft} from "lucide-react";
 import AnimatedCaseStudy from "./AnimatedCaseStudy";
 
 const projectData: Record<
@@ -279,6 +278,146 @@ const projectData: Record<
     code: "https://github.com/Paulwamaria/nexaPOS",
     privateCode: false,
   },
+  serverFleet: {
+    title: "Server Fleet Monitor",
+    category: "Infrastructure Monitoring Platform",
+    heroImage: "/projects/server-fleet.png",
+
+    overview:
+      "Server Fleet Monitor is an infrastructure observability platform designed to help teams monitor server health, track performance metrics, define alert rules, and maintain operational visibility across distributed environments.",
+
+    problem:
+      "As infrastructure grows, teams struggle to maintain visibility into server health, performance degradation, stale metrics, and operational incidents. The challenge was to build a system that centralizes monitoring data and enables proactive issue detection before outages impact users.",
+
+    solution:
+      "I designed and implemented a full-stack monitoring platform using NestJS and Next.js. The system provides server inventory management, metrics visualization, configurable alerting rules, activity tracking, and historical analysis through a clean operational dashboard.",
+
+    features: [
+      "Server inventory management",
+      "Health status monitoring",
+      "CPU, memory, and disk metric tracking",
+      "Historical metrics visualization",
+      "Custom alert rule creation",
+      "Alert acknowledgment and dismissal",
+      "Activity and audit logging",
+      "Filtering and pagination",
+      "Infrastructure simulation workflows",
+    ],
+
+    stack: [
+      "NestJS",
+      "Next.js",
+      "Prisma",
+      "PostgreSQL",
+      "TypeScript",
+      "Docker",
+    ],
+
+    challenges: [
+      "Designing extensible alert workflows that support future metric types.",
+      "Balancing backend efficiency with dashboard responsiveness.",
+      "Structuring historical metric data for visualization and analysis.",
+      "Maintaining traceable operational activity across user actions.",
+      "Implementing realistic monitoring workflows without direct infrastructure integrations.",
+    ],
+
+    outcome:
+      "Server Fleet Monitor demonstrates my ability to build operational systems that support observability, incident response, and infrastructure decision-making. It highlights backend architecture skills, data modeling, and the ability to translate technical workflows into usable interfaces.",
+
+    architecture: [
+      {
+        title: "Next.js Dashboard",
+        description:
+          "Provides operators with visibility into server health, alerts, metrics, and activity history.",
+      },
+      {
+        title: "NestJS API Layer",
+        description:
+          "Coordinates monitoring workflows, alert management, server operations, and dashboard interactions.",
+      },
+      {
+        title: "Prisma ORM",
+        description:
+          "Provides strongly typed access to the database and simplifies schema evolution.",
+      },
+      {
+        title: "PostgreSQL Database",
+        description:
+          "Stores servers, metric snapshots, alert rules, alerts, and activity records.",
+      },
+      {
+        title: "Monitoring Engine",
+        description:
+          "Evaluates incoming metrics, detects stale conditions, and triggers alert workflows.",
+      },
+      {
+        title: "Audit & Activity Layer",
+        description:
+          "Captures operational events to improve accountability and troubleshooting.",
+      },
+    ],
+
+    flow: [
+      {
+        title: "Register Server",
+        description:
+          "Infrastructure assets are added to the monitoring inventory.",
+      },
+      {
+        title: "Capture Metrics",
+        description:
+          "Metric snapshots are collected and persisted for analysis.",
+      },
+      {
+        title: "Evaluate Rules",
+        description:
+          "Alert conditions are checked against incoming monitoring data.",
+      },
+      {
+        title: "Trigger Alerts",
+        description:
+          "Incidents are surfaced when thresholds or stale conditions are detected.",
+      },
+      {
+        title: "Operator Response",
+        description:
+          "Teams acknowledge, investigate, and dismiss alerts while maintaining operational records.",
+      },
+      {
+        title: "Audit Activity",
+        description:
+          "All significant actions are logged to support traceability.",
+      },
+    ],
+
+    screenshots: [
+      {
+        image: "/projects/server-dashboard.png",
+        title: "Operations Dashboard",
+        description:
+          "A centralized view of server health, alerts, and infrastructure status.",
+      },
+      {
+        image: "/projects/server-metrics.png",
+        title: "Metrics Visualization",
+        description:
+          "Historical performance charts help identify trends and anomalies.",
+      },
+      {
+        image: "/projects/server-alerts.png",
+        title: "Alert Management",
+        description:
+          "Operators can acknowledge, investigate, and resolve incidents efficiently.",
+      },
+    ],
+
+    insight:
+      "Monitoring is not just about collecting metrics. The real value lies in transforming operational data into actionable insights that enable teams to respond quickly, maintain reliability, and build trust in their systems.",
+
+    live: "/code-access?project=serverFleet",
+    code: "/code-access?project=serverFleet",
+    privateCode: true,
+  },
   carenne: {
     title: "Carenne Fashion House",
     category: "Luxury E-commerce Platform",
@@ -409,6 +548,124 @@ const projectData: Record<
     code: "/code-access?project=carenne",
     privateCode: true,
   },
+  pembeMachinery: {
+    title: "Pembe Machinery",
+    category: "Full-Stack Business Platform",
+    heroImage: "/projects/pembe-home.png",
+
+    overview:
+      "Pembe Machinery is a full-stack platform designed to help machinery businesses manage their product catalog, media assets, and customer-facing content through a scalable and maintainable architecture.",
+
+    problem:
+      "Many machinery businesses rely on static websites that make updating products and content difficult. The challenge was to build a platform that gives businesses control over their digital presence while maintaining a professional browsing experience for customers.",
+
+    solution:
+      "I developed Pembe Machinery using Next.js and Prisma to provide a modern frontend experience backed by structured data management. The system supports product administration, media management, and scalable content workflows that simplify ongoing updates.",
+
+    features: [
+      "Product catalog management",
+      "Media upload and organization",
+      "Dynamic product detail pages",
+      "Responsive customer-facing interface",
+      "Admin workflows for content updates",
+      "Database-driven product management",
+      "Scalable architecture for future enhancements",
+    ],
+
+    stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+
+    challenges: [
+      "Designing a flexible product structure capable of supporting diverse machinery listings.",
+      "Managing media assets while maintaining a clean browsing experience.",
+      "Balancing simplicity for administrators with a polished customer interface.",
+      "Building an architecture that supports future growth and feature expansion.",
+    ],
+
+    outcome:
+      "Pembe Machinery demonstrates my ability to architect complete business platforms, combining frontend experiences with backend-driven workflows and maintainable database structures.",
+
+    architecture: [
+      {
+        title: "Next.js Frontend",
+        description:
+          "Provides responsive product browsing and customer-facing experiences.",
+      },
+      {
+        title: "Prisma ORM",
+        description:
+          "Acts as the bridge between application logic and the database using strongly typed models.",
+      },
+      {
+        title: "PostgreSQL Database",
+        description: "Stores products, media references, and business content.",
+      },
+      {
+        title: "Content Management Layer",
+        description:
+          "Supports product updates, media organization, and administrative workflows.",
+      },
+      {
+        title: "Presentation Layer",
+        description:
+          "Transforms structured business data into an accessible customer experience.",
+      },
+    ],
+
+    flow: [
+      {
+        title: "Manage Products",
+        description: "Administrators create and maintain machinery listings.",
+      },
+      {
+        title: "Upload Media",
+        description:
+          "Product images and supporting assets are organized and attached to listings.",
+      },
+      {
+        title: "Publish Content",
+        description:
+          "Updated product information becomes available to customers.",
+      },
+      {
+        title: "Customer Exploration",
+        description:
+          "Visitors browse machinery categories and view detailed product information.",
+      },
+      {
+        title: "Business Growth",
+        description:
+          "The platform provides a scalable foundation for expanding digital operations.",
+      },
+    ],
+
+    screenshots: [
+      {
+        image: "/projects/pembe-home.png",
+        title: "Homepage",
+        description:
+          "A professional landing experience designed to establish trust and showcase offerings.",
+      },
+      {
+        image: "/projects/pembe-products.png",
+        title: "Product Catalog",
+        description:
+          "Structured listings that make it easy for customers to explore machinery options.",
+      },
+      {
+        image: "/projects/pembe-admin.png",
+        title: "Content Management",
+        description:
+          "Administrative workflows that simplify product and media updates.",
+      },
+    ],
+
+    insight:
+      "Business platforms succeed when they empower both customers and administrators. Building maintainable workflows behind the scenes is just as important as creating polished user experiences.",
+
+    live: "https://github.com/Paulwamaria/PembeMachinery",
+    code: "https://github.com/Paulwamaria/PembeMachinery",
+    privateCode: false,
+  },
   visoima: {
     title: "Visoi Machineries",
     category: "Business Website",
@@ -498,6 +755,134 @@ const projectData: Record<
     code: "/code-access?project=ascend",
     privateCode: true,
   },
+  onGeo: {
+  title: "On-Geo Manager",
+  category: "Geospatial Access & Attendance Platform",
+  heroImage: "/projects/ongeo.png",
+
+  overview:
+    "On-Geo Manager is a geospatial web application designed to connect members of an organisation while controlling access to information and attendance workflows using geographic location. The system verifies whether users are physically present within configured checkpoints before granting access or recording attendance.",
+
+  problem:
+    "Traditional attendance systems often rely on manual verification or trust-based reporting. Organisations needed a more reliable approach that could confirm physical presence and restrict access to selected resources based on geographic location.",
+
+  solution:
+    "I built On-Geo Manager using Django and GeoDjango with PostGIS to enable spatial verification workflows. The application compares a user's coordinates against predefined checkpoints to determine eligibility for attendance and access to organisation resources.",
+
+  features: [
+    "User registration and profile management",
+    "Location-aware attendance verification",
+    "Geographic checkpoint configuration",
+    "Distance and proximity validation",
+    "Location-based access control",
+    "Administrative attendance management",
+    "Organisation content visibility controls",
+  ],
+
+  stack: [
+    "Python",
+    "Django 4.2",
+    "GeoDjango",
+    "PostGIS",
+    "PostgreSQL",
+    "Bootstrap",
+    "JavaScript",
+  ],
+
+  challenges: [
+    "Working with spatial data and geospatial concepts unfamiliar to many web applications.",
+    "Configuring GeoDjango alongside PostGIS-enabled PostgreSQL environments.",
+    "Designing workflows that accurately determine whether users fall within defined geographic boundaries.",
+    "Balancing usability with strict location-based validation rules.",
+  ],
+
+  outcome:
+    "On-Geo Manager demonstrates my ability to adapt software engineering principles to geospatial domains, leveraging spatial databases and geographic computations to solve real-world organisational problems.",
+
+  architecture: [
+    {
+      title: "Django Frontend",
+      description:
+        "Provides user interfaces for attendance, profile management, and organisational workflows.",
+    },
+    {
+      title: "GeoDjango Layer",
+      description:
+        "Handles geographic calculations and spatial operations required for location verification.",
+    },
+    {
+      title: "PostGIS Database",
+      description:
+        "Extends PostgreSQL with spatial capabilities for storing and querying geographic information.",
+    },
+    {
+      title: "Attendance Engine",
+      description:
+        "Compares user locations against configured checkpoints to determine attendance eligibility.",
+    },
+    {
+      title: "Access Control Layer",
+      description:
+        "Restricts organisational resources based on geographic validation outcomes.",
+    },
+  ],
+
+  flow: [
+    {
+      title: "User Authentication",
+      description:
+        "Members sign in and access their organisational workspace.",
+    },
+    {
+      title: "Location Capture",
+      description:
+        "The system obtains the user's current geographic coordinates.",
+    },
+    {
+      title: "Checkpoint Validation",
+      description:
+        "User coordinates are compared against configured geographic checkpoints.",
+    },
+    {
+      title: "Attendance Decision",
+      description:
+        "Attendance is recorded if the user falls within the permitted range.",
+    },
+    {
+      title: "Access Determination",
+      description:
+        "Resources are either granted or restricted based on validation results.",
+    },
+  ],
+
+  screenshots: [
+    {
+      image: "/projects/ongeo.png",
+      title: "Organisation Dashboard",
+      description:
+        "A central workspace connecting users with location-aware organisational workflows.",
+    },
+    {
+      image: "/projects/ongeo-attendance.png",
+      title: "Attendance Verification",
+      description:
+        "Attendance is automatically validated using geographic checkpoints.",
+    },
+    {
+      image: "/projects/ongeo-admin.png",
+      title: "Administrative Controls",
+      description:
+        "Administrators configure checkpoints and manage attendance visibility.",
+    },
+  ],
+
+  insight:
+    "Location data becomes powerful when it supports trust and accountability. By combining spatial databases with business workflows, organisations can move beyond manual verification and build systems rooted in real-world context.",
+
+  live: "https://github.com/Paulwamaria/On-Geo",
+  code: "https://github.com/Paulwamaria/On-Geo",
+  privateCode: false,
+},
 };
 
 export default async function ProjectCaseStudyPage({

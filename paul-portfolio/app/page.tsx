@@ -44,14 +44,14 @@ const featuredProjects = [
     category: "Multi-Branch Point of Sale System",
     summary:
       "A retail management platform designed to streamline inventory, sales, cash shifts, and branch operations through structured business workflows.",
-    stack: ["Django", "Django REST Framework", "JWT", "PostgreSQL", "SQLite"],
+    stack: ["Django", "Django REST Framework", "JWT", "Nextjs", "PostgreSQL", "SQLite"],
     impact:
       "Demonstrates practical business systems engineering through inventory control, sales processing, returns management, audit trails, and role-based access.",
     live: "https://github.com/Paulwamaria/nexaPOS",
     code: "https://github.com/Paulwamaria/nexaPOS",
     caseStudy: "/projects/nexapos",
   },
-  {
+    {
     title: "Carenne Fashion House",
     slug: "carenne",
     image: "/projects/carenne.png",
@@ -64,6 +64,56 @@ const featuredProjects = [
     live: "https://carennedesigns.com",
     code: "/code-access?project=carenne",
     caseStudy: "/projects/carenne",
+  },
+  {
+    title: "Server Fleet Monitor",
+    slug: "server-fleet-monitor",
+    image: "/projects/server-fleet.png",
+    category: "Infrastructure Monitoring Platform",
+    summary:
+      "An observability platform built to monitor server health, visualize performance metrics, and streamline incident response through structured operational workflows.",
+    stack: [
+      "NestJS",
+      "Next.js",
+      "Prisma",
+      "PostgreSQL",
+      "Docker",
+      "TypeScript",
+    ],
+    impact:
+      "Demonstrates backend maturity and operational thinking through metrics monitoring, alert management, activity tracking, and infrastructure visibility.",
+    live: "/code-access?project=serverFleet",
+    code: "/code-access?project=serverFleet",
+    caseStudy: "/projects/serverFleet",
+  },
+
+  {
+    title: "Pembe Machinery",
+    slug: "pembe-machinery",
+    image: "/projects/pembe-home.png",
+    category: "Full-Stack Business Platform",
+    summary:
+      "A machinery platform built to manage products, media assets, and business content through a structured full-stack architecture designed for maintainability and growth.",
+    stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    impact:
+      "Demonstrates full-stack architecture, content management workflows, database modeling, and the ability to build business platforms that balance usability with maintainability.",
+    live: "https://github.com/Paulwamaria/PembeMachinery",
+    code: "https://github.com/Paulwamaria/PembeMachinery",
+    caseStudy: "/projects/pembeMachinery",
+  },
+  {
+    title: "Ascend",
+    slug: "ascend",
+    image: "/projects/ascend.png",
+    category: "Social Platform / Product",
+    summary:
+      "A social growth platform combining networking, motivation, and community engagement through circles, challenges, and user-driven interaction.",
+    stack: ["React", "Django", "PostgreSQL", "Tailwind CSS"],
+    impact:
+      "Built to support meaningful digital engagement with product-focused architecture, onboarding flows, and scalable backend systems.",
+    live: "https://nexa-asfrontend.vercel.app",
+    code: "/code-access?project=ascend",
+    caseStudy: "/projects/ascend",
   },
   {
     title: "Visoi Machineries",
@@ -93,21 +143,27 @@ const featuredProjects = [
     code: "/code-access?project=trading",
     caseStudy: "/projects/trading",
   },
-
   {
-    title: "Ascend",
-    slug: "ascend",
-    image: "/projects/ascend.png",
-    category: "Social Platform / Product",
-    summary:
-      "A social growth platform combining networking, motivation, and community engagement through circles, challenges, and user-driven interaction.",
-    stack: ["React", "Django", "PostgreSQL", "Tailwind CSS"],
-    impact:
-      "Built to support meaningful digital engagement with product-focused architecture, onboarding flows, and scalable backend systems.",
-    live: "https://nexa-asfrontend.vercel.app",
-    code: "/code-access?project=ascend",
-    caseStudy: "/projects/ascend",
-  },
+  title: "On-Geo Manager",
+  slug: "on-geo",
+  image: "/projects/ongeo.png",
+  category: "Geospatial Access & Attendance Platform",
+  summary:
+    "A GeoDjango application that uses geographic checkpoints to verify attendance and restrict access to organisational resources based on a user's physical location.",
+  stack: [
+    "Python",
+    "Django",
+    "GeoDjango",
+    "PostGIS",
+    "PostgreSQL",
+    "Bootstrap",
+  ],
+  impact:
+    "Demonstrates geospatial engineering through location-based attendance verification, geographic access control, and spatial data processing.",
+  live: "https://github.com/Paulwamaria/On-Geo",
+  code: "https://github.com/Paulwamaria/On-Geo",
+  caseStudy: "/projects/onGeo",
+},
 ];
 
 const systems = [
