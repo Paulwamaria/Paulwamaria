@@ -44,14 +44,21 @@ const featuredProjects = [
     category: "Multi-Branch Point of Sale System",
     summary:
       "A retail management platform designed to streamline inventory, sales, cash shifts, and branch operations through structured business workflows.",
-    stack: ["Django", "Django REST Framework", "JWT", "Nextjs", "PostgreSQL", "SQLite"],
+    stack: [
+      "Django",
+      "Django REST Framework",
+      "JWT",
+      "Nextjs",
+      "PostgreSQL",
+      "SQLite",
+    ],
     impact:
       "Demonstrates practical business systems engineering through inventory control, sales processing, returns management, audit trails, and role-based access.",
     live: "https://github.com/Paulwamaria/nexaPOS",
     code: "https://github.com/Paulwamaria/nexaPOS",
     caseStudy: "/projects/nexapos",
   },
-    {
+  {
     title: "Carenne Fashion House",
     slug: "carenne",
     image: "/projects/carenne.png",
@@ -144,26 +151,26 @@ const featuredProjects = [
     caseStudy: "/projects/trading",
   },
   {
-  title: "On-Geo Manager",
-  slug: "on-geo",
-  image: "/projects/ongeo.png",
-  category: "Geospatial Access & Attendance Platform",
-  summary:
-    "A GeoDjango application that uses geographic checkpoints to verify attendance and restrict access to organisational resources based on a user's physical location.",
-  stack: [
-    "Python",
-    "Django",
-    "GeoDjango",
-    "PostGIS",
-    "PostgreSQL",
-    "Bootstrap",
-  ],
-  impact:
-    "Demonstrates geospatial engineering through location-based attendance verification, geographic access control, and spatial data processing.",
-  live: "https://github.com/Paulwamaria/On-Geo",
-  code: "https://github.com/Paulwamaria/On-Geo",
-  caseStudy: "/projects/onGeo",
-},
+    title: "On-Geo Manager",
+    slug: "on-geo",
+    image: "/projects/ongeo.png",
+    category: "Geospatial Access & Attendance Platform",
+    summary:
+      "A GeoDjango application that uses geographic checkpoints to verify attendance and restrict access to organisational resources based on a user's physical location.",
+    stack: [
+      "Python",
+      "Django",
+      "GeoDjango",
+      "PostGIS",
+      "PostgreSQL",
+      "Bootstrap",
+    ],
+    impact:
+      "Demonstrates geospatial engineering through location-based attendance verification, geographic access control, and spatial data processing.",
+    live: "https://github.com/Paulwamaria/On-Geo",
+    code: "https://github.com/Paulwamaria/On-Geo",
+    caseStudy: "/projects/onGeo",
+  },
 ];
 
 const systems = [
@@ -177,19 +184,90 @@ const systems = [
 
 const books = [
   {
+    title: "Finding The Remote Of Life",
+    image: "/books/remote_of_life.jpg",
+    type: "Kindle Book",
+    description: `What if the control you have been searching for was never truly lost - only buried beneath habit, fear, expectation, and noise?
+
+Finding the Remote of Life is a reflective journey through the familiar buttons of human experience: Pause, Rewind, Fast Forward, Mute, Volume, Power, and more. With honesty and compassion, Paul Wamaria explores how our patterns, relationships, uncertainty, and exhaustion shape the lives we live - often before we consciously choose them.
+
+This book does not promise total control. It offers something more honest: the awareness to recognize what is happening, the courage to choose your response, and the presence to participate fully in the life already unfolding.
+
+For anyone who has felt stuck, overwhelmed, disconnected, or unsure of the next step, Finding the Remote of Life is an invitation to slow down, look beneath the cushions, and rediscover where your power still lives.
+
+You are not outside your life, searching for the right button. You are already here.`,
+    link: "https://www.amazon.com/dp/B0GZCD5VS4",
+  },
+  {
     title: "What Remains After",
     image: "/books/what-remains.jpg",
     type: "Kindle Book",
-    description:
-      "A published work that reflects my storytelling, long-form writing ability, and creative discipline.",
+    description: `Brian thought the worst thing that could happen was losing everything.
+
+He was wrong.
+
+When his grandfather is brutally murdered, Brian finds himself framed for the crime—his name dragged through the mud, his future erased overnight. With no one to believe him and nowhere to run, he disappears into a world that doesn’t care whether he survives.
+
+But survival changes people.
+
+As Brian fights to reclaim his life, an unexpected alliance begins to uncover the truth behind the crime—one that leads to greed, betrayal, and a secret worth killing for.
+
+Just when the truth finally surfaces, it slips away again… leaving Brian trapped between justice and silence.
+
+In a story of loss, resilience, and redemption, What Remains After asks a haunting question:
+
+When everything is taken from you… what remains?`,
     link: "https://www.amazon.com/dp/B0GWQH1BM5",
   },
   {
     title: "The Curated Ruin",
     image: "/books/the-curated-ruin.jpg",
     type: "Kindle Book",
-    description:
-      "A thriller that showcases structure, detail, narrative tension, and strong creative world-building.",
+    description: `A psychological art thriller about perception, authorship, and the violence of being seen
+She knew it was wrong before she understood why.
+
+Not the body.
+Not the blood.
+
+The composition.
+
+When art restoration student Elena Vieri steps into her mentor’s studio, she doesn’t find a crime scene.
+
+She finds a decision.
+
+Everything is placed. Every detail deliberate. The silence itself feels arranged.
+
+Someone didn’t just kill him.
+
+Someone composed him.
+
+That’s when she meets Lucien.
+
+He isn’t there to investigate.
+
+He’s there because something has already begun.
+
+Across Europe, deaths are being staged—not hidden, not disguised, but constructed. Scenes that feel too precise to be random. Too intentional to be chaos.
+
+Someone is building something.
+
+Not a pattern.
+
+A collection.
+
+And Elena is no longer outside it.
+
+She is learning to see what others can’t—
+the fractures beneath surfaces,
+the absences where something should exist,
+the quiet places where truth has been rewritten.
+
+The more she understands, the more dangerous she becomes.
+
+Because this isn’t about art.
+
+It’s about authorship.
+`,
     link: "https://www.amazon.com/dp/B0GTF3JFC1",
   },
 ];
@@ -550,9 +628,11 @@ export default function HomePage() {
             <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">
               Writing & Published Work
             </p>
+
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
               Beyond code, I write and publish
             </h2>
+
             <p className="mt-4 max-w-3xl text-base leading-8 text-neutral-300">
               My writing reflects another side of how I build: structure,
               imagination, clarity, and attention to detail. These qualities
@@ -560,27 +640,35 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {books.map((book) => (
               <div
                 key={book.title}
-                className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:border-fuchsia-400/30 hover:bg-white/10"
+                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-fuchsia-400/30 hover:bg-white/10"
               >
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={book.image}
-                    alt={book.title}
-                    fill
-                    className="object-cover"
-                  />
+                {/* Book cover */}
+                <div className="flex h-72 items-center justify-center bg-black/20 p-5">
+                  <div className="relative h-full w-48">
+                    <Image
+                      src={book.image}
+                      alt={`${book.title} book cover`}
+                      fill
+                      sizes="192px"
+                      className="object-contain drop-shadow-2xl transition duration-300 group-hover:scale-[1.03]"
+                    />
+                  </div>
                 </div>
 
+                {/* Book information */}
                 <div className="p-6">
                   <div className="mb-4 inline-flex rounded-2xl border border-fuchsia-400/20 bg-fuchsia-500/10 p-3 text-fuchsia-200">
                     <BookOpen className="h-5 w-5" />
                   </div>
+
                   <p className="text-sm text-fuchsia-300">{book.type}</p>
+
                   <h3 className="mt-3 text-2xl font-semibold">{book.title}</h3>
+
                   <p className="mt-4 text-sm leading-7 text-neutral-300">
                     {book.description}
                   </p>
@@ -589,9 +677,10 @@ export default function HomePage() {
                     href={book.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-6 inline-flex items-center rounded-2xl border border-white/15 px-4 py-2 text-sm text-white transition hover:bg-white/10"
+                    className="mt-6 inline-flex items-center rounded-2xl border border-white/15 px-4 py-2 text-sm text-white transition hover:border-fuchsia-400/30 hover:bg-white/10"
                   >
-                    View Book <ArrowRight className="ml-2 h-4 w-4" />
+                    Download ebook
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </div>
               </div>
