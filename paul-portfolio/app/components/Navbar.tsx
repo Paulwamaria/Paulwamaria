@@ -5,9 +5,10 @@ import { Github, Menu, X, Linkedin } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Projects", href: "#projects" },
-  { label: "Writing", href: "#writing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Emryon", href: "/#emryon" },
+  { label: "Writing", href: "/#writing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 function TikTokIcon({ className = "h-4 w-4" }) {
