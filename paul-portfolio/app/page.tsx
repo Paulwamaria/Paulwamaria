@@ -625,21 +625,21 @@ export default function HomePage() {
           className="scroll-mt-24 border-y border-white/10 bg-white/[0.03]"
         >
           <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12">
-            <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-              <div>
-                <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">
-                  Emryon &amp; ProjectSupport
-                </p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-                  Independent software, built in public and supported by community.
-                </h2>
-                <p className="mt-5 text-base leading-8 text-neutral-300">
-                  Emryon is my independent software and digital-product brand. It is
-                  not a registered company. It brings together the products, tools,
-                  experiments, and creative technology I build independently.
-                </p>
-              </div>
+            <div className="mb-10 max-w-3xl">
+              <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">
+                Emryon
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+                Independent software, digital products, and creative technology.
+              </h2>
+              <p className="mt-5 text-base leading-8 text-neutral-300">
+                Emryon is my independent software and digital-product brand. It is
+                not a registered company. It brings together the products, tools,
+                experiments, and technology initiatives I build independently.
+              </p>
+            </div>
 
+            <div className="grid gap-6 lg:grid-cols-2">
               <div className="rounded-[2rem] border border-fuchsia-400/20 bg-gradient-to-br from-fuchsia-500/10 via-neutral-900/80 to-purple-500/10 p-7 md:p-8">
                 <p className="text-sm font-medium text-fuchsia-300">ProjectSupport</p>
                 <h3 className="mt-3 text-2xl font-semibold">Support independent software projects</h3>
@@ -647,13 +647,30 @@ export default function HomePage() {
                   ProjectSupport is a donation API that allows people to voluntarily
                   support my independent software projects. Contributions help with
                   development, hosting, infrastructure, testing, and continued
-                  maintenance. A contribution is not an investment and does not
-                  purchase equity, ownership, or a guaranteed product or return.
+                  maintenance.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3 text-sm">
                   <Link href="/privacy" className="rounded-2xl border border-white/15 px-4 py-2 text-white transition hover:bg-white/10">Privacy Policy</Link>
                   <Link href="/terms" className="rounded-2xl border border-white/15 px-4 py-2 text-white transition hover:bg-white/10">Terms</Link>
                   <Link href="/refund-policy" className="rounded-2xl border border-white/15 px-4 py-2 text-white transition hover:bg-white/10">Refund Policy</Link>
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border border-fuchsia-400/20 bg-gradient-to-br from-purple-500/10 via-neutral-900/80 to-fuchsia-500/10 p-7 md:p-8">
+                <p className="text-sm font-medium text-fuchsia-300">Emryon FX</p>
+                <h3 className="mt-3 text-2xl font-semibold">Forex education, research &amp; trading technology</h3>
+                <p className="mt-4 text-sm leading-7 text-neutral-300">
+                  A learning and experimentation initiative exploring financial-market
+                  concepts through visual education, practical research, risk awareness,
+                  and software-driven trading tools.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3 text-sm">
+                  <Link href="/emryon-fx" className="inline-flex items-center rounded-2xl bg-fuchsia-500 px-4 py-2 font-medium text-white transition hover:bg-fuchsia-400">
+                    Explore Emryon FX <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                  <a href="https://www.tiktok.com/@emryon_fx" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/15 px-4 py-2 text-white transition hover:bg-white/10">
+                    Follow @emryon_fx
+                  </a>
                 </div>
               </div>
             </div>
@@ -754,6 +771,15 @@ export default function HomePage() {
                   className="inline-flex items-center rounded-2xl bg-white px-5 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
                 >
                   Email Me
+                </a>
+                <a
+                  href="https://wa.me/254768972290"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Chat with Paul on WhatsApp at 0768 972 290"
+                  className="inline-flex items-center rounded-2xl border border-white/15 px-5 py-3 font-medium text-white transition hover:border-fuchsia-400/30 hover:bg-white/10"
+                >
+                  WhatsApp · 0768 972 290
                 </a>
                 <Link
                   href="https://github.com/Paulwamaria"
