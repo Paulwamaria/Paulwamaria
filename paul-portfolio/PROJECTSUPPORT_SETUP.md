@@ -1,15 +1,9 @@
-# ProjectSupport widget configuration
+# ProjectSupport links
 
-The homepage ProjectSupport widget uses the production API:
+The Emryon section links visitors to the production ProjectSupport pages for the two primary projects:
 
-`https://projectsupport-api.vercel.app`
+- Tulia: `https://projectsupport-api.vercel.app/support/tulia/`
+- Carenne Fashion House: `https://projectsupport-api.vercel.app/support/carenne/`
+- Project hub: `https://projectsupport-api.vercel.app/support/`
 
-Set the ProjectSupport **public** project key in the deployment environment:
-
-```bash
-NEXT_PUBLIC_PROJECTSUPPORT_KEY=ps_pub_your_full_public_key_here
-```
-
-For Netlify, add this variable in the site's environment variables and redeploy.
-
-Only the `ps_pub_...` public key belongs in this frontend variable. Never place the ProjectSupport secret/admin key or an IntaSend secret key in the portfolio source or any `NEXT_PUBLIC_...` variable.
+The portfolio no longer initiates payments directly and does not require a ProjectSupport environment variable. Public project keys are resolved by ProjectSupport on the individual support pages. Never place a ProjectSupport secret/admin key or an IntaSend secret key in this frontend.

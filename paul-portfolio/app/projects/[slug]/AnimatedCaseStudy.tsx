@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Github, Lock, Mail } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, HeartHandshake, Lock, Mail } from "lucide-react";
 
 type Project = {
   title: string;
@@ -52,8 +52,16 @@ type AnimatedCaseStudyProps = {
 
 export default function AnimatedCaseStudy({
   project,
+  slug,
   relatedProjects = [],
 }: AnimatedCaseStudyProps) {
+  const supportUrl =
+    slug === "tulia"
+      ? "https://projectsupport-api.vercel.app/support/tulia/"
+      : slug === "carenne"
+        ? "https://projectsupport-api.vercel.app/support/carenne/"
+        : undefined;
+
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <section className="relative overflow-hidden border-b border-white/10">
@@ -135,6 +143,18 @@ export default function AnimatedCaseStudy({
                 <Github className="mr-2 h-4 w-4" />
                 View Code
               </Link>
+            )}
+
+            {supportUrl && (
+              <a
+                href={supportUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 px-5 py-3 font-medium text-fuchsia-100 transition hover:bg-fuchsia-500/20"
+              >
+                <HeartHandshake className="mr-2 h-4 w-4" />
+                Support {project.title}
+              </a>
             )}
           </motion.div>
 
@@ -275,6 +295,29 @@ export default function AnimatedCaseStudy({
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-6 pb-16 md:px-10 lg:px-12">
+        {supportUrl && (
+          <AnimatedCard>
+            <div className="text-center">
+              <HeartHandshake className="mx-auto h-8 w-8 text-fuchsia-300" />
+              <h2 className="mt-4 text-2xl font-semibold">Help {project.title} keep growing</h2>
+              <p className="mx-auto mt-3 max-w-2xl leading-7 text-neutral-300">
+                Voluntary project support helps cover continued development, hosting, testing, infrastructure, and maintenance.
+              </p>
+              <a
+                href={supportUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center rounded-2xl bg-fuchsia-500 px-6 py-3 font-medium text-white transition hover:bg-fuchsia-400"
+              >
+                <HeartHandshake className="mr-2 h-4 w-4" />
+                Support {project.title}
+              </a>
+              <p className="mt-4 text-xs text-neutral-500">Voluntary project support, not a charitable donation or purchase.</p>
+            </div>
+          </AnimatedCard>
+        )}
+
+        <div className={supportUrl ? "mt-8" : undefined}>
         <AnimatedCard>
           <h2 className="text-2xl font-semibold">Product Walkthrough</h2>
 
@@ -328,6 +371,7 @@ export default function AnimatedCaseStudy({
             ))}
           </div>
         </AnimatedCard>
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-16 md:px-10 lg:px-12">

@@ -14,6 +14,7 @@ import {
   Boxes,
   BookOpen,
   FileText,
+  HeartHandshake,
 } from "lucide-react";
 
 const featuredProjects = [
@@ -37,6 +38,7 @@ const featuredProjects = [
     live: "https://growwithtulia.com",
     code: "/code-access?project=tulia",
     caseStudy: "/projects/tulia",
+    support: "https://projectsupport-api.vercel.app/support/tulia/",
   },
   {
     title: "NexaPOS",
@@ -72,6 +74,7 @@ const featuredProjects = [
     live: "https://carennedesigns.com",
     code: "/code-access?project=carenne",
     caseStudy: "/projects/carenne",
+    support: "https://projectsupport-api.vercel.app/support/carenne/",
   },
   {
     title: "Server Fleet Monitor",
@@ -497,6 +500,18 @@ export default function HomePage() {
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Link>
+
+                    {project.support && (
+                      <a
+                        href={project.support}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center rounded-2xl border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-medium text-fuchsia-100 transition hover:bg-fuchsia-500/20"
+                      >
+                        <HeartHandshake className="mr-2 h-4 w-4" />
+                        Support
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -646,9 +661,8 @@ export default function HomePage() {
                 <h3 className="mt-3 text-2xl font-semibold">Support independent software projects</h3>
                 <p className="mt-4 text-sm leading-7 text-neutral-300">
                   ProjectSupport is a payment API that allows people to provide voluntary
-                  project support for my independent software projects. Contributions help with
-                  development, hosting, infrastructure, testing, and continued
-                  maintenance.
+                  support directly to Tulia or Carenne Fashion House. Contributions help with
+                  development, hosting, infrastructure, testing, and continued maintenance.
                 </p>
                 <ProjectSupportWidget />
                 <div className="mt-6 flex flex-wrap gap-3 text-sm">
