@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import ProjectSupportWidget from "./components/ProjectSupportWidget";
 import {
   Github,
   Globe,
@@ -644,11 +645,12 @@ export default function HomePage() {
                 <p className="text-sm font-medium text-fuchsia-300">ProjectSupport</p>
                 <h3 className="mt-3 text-2xl font-semibold">Support independent software projects</h3>
                 <p className="mt-4 text-sm leading-7 text-neutral-300">
-                  ProjectSupport is a donation API that allows people to voluntarily
-                  support my independent software projects. Contributions help with
+                  ProjectSupport is a payment API that allows people to provide voluntary
+                  project support for my independent software projects. Contributions help with
                   development, hosting, infrastructure, testing, and continued
                   maintenance.
                 </p>
+                <ProjectSupportWidget />
                 <div className="mt-6 flex flex-wrap gap-3 text-sm">
                   <Link href="/privacy" className="rounded-2xl border border-white/15 px-4 py-2 text-white transition hover:bg-white/10">Privacy Policy</Link>
                   <Link href="/terms" className="rounded-2xl border border-white/15 px-4 py-2 text-white transition hover:bg-white/10">Terms</Link>
